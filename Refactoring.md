@@ -9,3 +9,6 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+I made use of the conditional operator and short-circuiting to reduce the number of lines of code. I used the generateHashFromData function to make it more descriptive. Besides, in the code, I replaced the String() constructor with string literals to convert variables into strings for readability.
+
+The original code had unnecessary variable declarations and assignments in comparison to the optimized version. The enhanced version checks if event.partitionKey is undefined instead of !event, making the code more precise. Because of these optimizations, the optimized code contains less redundant operations and reads like a concise and self-explantory block of code.

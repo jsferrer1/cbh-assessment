@@ -16,3 +16,41 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+Ticket 1: Add custom id field to Agents table
+
+Acceptance criteria:
+- A new field named custom_id is added to the Agents table in the database.
+- The custom_id field is a string field with a maximum length of 50 characters.
+- The custom_id field is unique for each Agent.
+
+Time/effort estimate: 2 hours
+
+Implementation details:
+- Create a new migration file to add the custom_id field to the Agents table.
+- Update the Agents model to include the custom_id field.
+- Update the Agents controller to handle the custom_id field in the create and update methods.
+- Update the Agents view to display the custom_id field in the list of Agents.
+
+Ticket 2: Update getShiftsByFacility function to use custom id
+
+Acceptance criteria:
+- The getShiftsByFacility function is updated to include the custom_id field for each Agent in the Shifts list.
+- If a custom id is not available for an Agent, the internal database id is used instead.
+
+Time/effort estimate: 4 hours
+
+Implementation details:
+- Update the getShiftsByFacility function to join the Agents table to the - Shifts table and include the custom_id field in the result set.
+- Modify the generateReport function to use the custom_id field if it is available, otherwise use the internal database id.
+
+Ticket 3: Update generateReport function to use custom id
+
+Acceptance criteria:
+- The generateReport function is updated to use the custom_id field for each Agent in the Shifts list.
+- If a custom id is not available for an Agent, the internal database id is used instead.
+
+Time/effort estimate: 4 hours
+
+Implementation details:
+- Modify the generateReport function to use the custom_id field if it is available, otherwise use the internal database id.
